@@ -4,40 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Loginception - Dream Level 2</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
+
+<style>
+body {background-image:url(https://i.ibb.co/6mK6rZR/IMG-15994.jpg);background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;}
+</style>
 
 <body>
   <nav>
     <a href="./">Home</a>
     <a href="./level1">Level 1</a>
     <a href="./level2">Level 2</a>
+    <a href="./level3">Level 3</a>
+    <a href="./level4">Level 4</a>
   </nav>
-  <section>
+  <section style="color:white">
+    <h1>><center>You're currently in Dream Level 2</h1></center>
+    <p><center>To traverse further, login with the name of a character whose dream <br>
+      you’d like to enter and the corresponding password.</center></p>
 
-    <h2>Level 2</h2>
-    <button id="btn-login" disabled="true" onclick="login()">Log in</button>
-    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+    <center><button id="btn-login" disabled="true" onclick="login()">Log in</button>
+    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button></center>
 
-    <div class="hidden" id="gated-content">
-      <p>
-        You're seeing this content because you're currently
-        <strong>logged in</strong>.
-      </p>
-      <label>
-        Access token:
-        <pre id="ipt-access-token"></pre>
-      </label>
-      <label>
-        User profile:
-        <pre id="ipt-user-profile"></pre>
-      </label>
+    <div id="user-profile" style="display:none;">
+      <p>Welcome <span id='username'></span></p>
+      <img style="width:100px;" id="profile-pic" src="" alt="profile pic">
     </div>
   </section>
+
+
 </body>
 
 <script src="https://cdn.auth0.com/js/auth0-spa-js/1.9/auth0-spa-js.production.js"></script>
-<!-- <script src="./js/level1.js"></script> -->
+<script src="./js/index.js"></script>
 
 </html>

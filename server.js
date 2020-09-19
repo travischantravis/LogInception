@@ -23,5 +23,13 @@ app.get("/level2", (_, res) => {
   res.sendFile(join(__dirname, "level2.html"));
 });
 
+app.get("/level3", (_, res) => {
+  res.sendFile(join(__dirname, "level3.html"));
+});
+
+app.get("/level4", (_, res) => {
+  res.sendFile(join(__dirname, "level4.html"));
+});
+
 // Listen on port 3000
 app.listen(3000, () => console.log("Application running on port 3000"));

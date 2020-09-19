@@ -1,40 +1,24 @@
-const express = require("express");
-const { join } = require("path");
-const app = express();
-var router = express.Router();
+<!DOCTYPE html>
+<html lang="en">
 
-router.get('/', function(req, res){
-  res.render('index', {
-    title: 'Home'
-  });
-});
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
 
-router.get('/level1', function(req, res){
-  res.render('level1', {
-    title: 'Level 1'
-  });
-});
+<body>
+  <h2>Welcome to LogInception</h2>
 
-router.get('/level2', function(req, res){
-  res.render('level2', {
-    title: 'Level 2'
-  });
-});
+  <a href="./level1">Level 1</a>
+  <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+  <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
 
-module.exports = router; 
 
-// Serve static assets from the /public folder
-app.use(express.static(join(__dirname, "public")));
+</body>
 
-// Endpoint to serve the configuration file
-app.get("/auth_config.json", (req, res) => {
-  res.sendFile(join(__dirname, "auth_config.json"));
-});
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.9/auth0-spa-js.production.js"></script>
+<script src="./app.js"></script>
 
-// Serve the index page for all other requests
-app.get("/*", (_, res) => {
-  res.sendFile(join(__dirname, "index.html"));
-});
-
-// Listen on port 3000
-app.listen(3000, () => console.log("Application running on port 3000"));
+</html>

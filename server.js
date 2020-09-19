@@ -10,9 +10,17 @@ app.get("/auth_config.json", (req, res) => {
   res.sendFile(join(__dirname, "auth_config.json"));
 });
 
-// Serve the index page for all other requests
-app.get("/*", (_, res) => {
+// Serve static html pages
+app.get("/", (_, res) => {
   res.sendFile(join(__dirname, "index.html"));
+});
+
+app.get("/level1", (_, res) => {
+  res.sendFile(join(__dirname, "level1.html"));
+});
+
+app.get("/level2", (_, res) => {
+  res.sendFile(join(__dirname, "level2.html"));
 });
 
 // Listen on port 3000

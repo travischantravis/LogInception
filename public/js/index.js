@@ -19,23 +19,25 @@ const updateUI = async () => {
   document.getElementById("btn-login").disabled = isAuthenticated;
 
   if (isAuthenticated) {
-    document.getElementById("gated-content").classList.remove("hidden");
+    // document.getElementById(
+    //   "ipt-access-token"
+    // ).innerHTML = await auth0.getTokenSilently();
+    const userProfile = await auth0.getUser();
+    console.log(userProfile);
+    document.getElementById("user-profile").style.display = "block";
 
-    document.getElementById(
-      "ipt-access-token"
-    ).innerHTML = await auth0.getTokenSilently();
-
-    document.getElementById("ipt-user-profile").textContent = JSON.stringify(
-      await auth0.getUser()
-    );
+    document.getElementById("username").textContent = userProfile.name;
+    document.getElementById("profile-pic").src = userProfile.picture;
   } else {
-    document.getElementById("gated-content").classList.add("hidden");
+    document.getElementById("user-profile").style.display = "none";
   }
 };
 
 const login = async () => {
+  console.log(window.location.origin);
   await auth0.loginWithRedirect({
-    redirect_uri: window.location.origin,
+    redirect_uri: "http://localhost:3000/level1",
+    // redirect_uri: window.location.origin,
   });
 };
 
@@ -65,6 +67,6 @@ window.onload = async () => {
     updateUI();
 
     // Use replaceState to redirect the user away and remove the querystring parameters
-    window.history.replaceState({}, document.title, "/");
+    // window.history.replaceState({}, document.title, "/");
   }
 };

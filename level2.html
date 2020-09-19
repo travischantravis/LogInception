@@ -5,31 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 
 <body>
-  <h2>Level 2</h2>
-  <button id="btn-login" disabled="true" onclick="login()">Log in</button>
-  <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+  <nav>
+    <a href="./">Home</a>
+    <a href="./level1">Level 1</a>
+    <a href="./level2">Level 2</a>
+  </nav>
+  <section>
 
-  <div class="hidden" id="gated-content">
-    <p>
-      You're seeing this content because you're currently
-      <strong>logged in</strong>.
-    </p>
-    <label>
-      Access token:
-      <pre id="ipt-access-token"></pre>
-    </label>
-    <label>
-      User profile:
-      <pre id="ipt-user-profile"></pre>
-    </label>
-  </div>
+    <h2>Level 2</h2>
+    <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+
+    <div class="hidden" id="gated-content">
+      <p>
+        You're seeing this content because you're currently
+        <strong>logged in</strong>.
+      </p>
+      <label>
+        Access token:
+        <pre id="ipt-access-token"></pre>
+      </label>
+      <label>
+        User profile:
+        <pre id="ipt-user-profile"></pre>
+      </label>
+    </div>
+  </section>
 </body>
 
 <script src="https://cdn.auth0.com/js/auth0-spa-js/1.9/auth0-spa-js.production.js"></script>
-<script src="./app.js"></script>
+<!-- <script src="./js/level1.js"></script> -->
 
 </html>

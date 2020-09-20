@@ -13,14 +13,14 @@ function LoginForm(props) {
           loginWithRedirect({ redirectUri: redirectUrl });
         }}
       >
-        Log In
+        Traverse
       </button>
       <button
         onClick={() => {
           logout({ returnTo: window.location.origin });
         }}
       >
-        Log Out
+        Wake Up
       </button>
     </div>
   );

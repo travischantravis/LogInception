@@ -3,8 +3,7 @@ import Level from "../components/Level";
 
 const LevelThree = () => {
   const bgStyles = {
-    backgroundImage:
-      "url(https://i.ibb.co/tLMmbfp/inception-314-jpg-optimal.jpg)",
+    backgroundImage: "url(https://s23527.pcdn.co/wp-content/uploads/2014/05/inception-314.jpg.optimal.jpg)",
     backgroundRepeat: "noRepeat",
     backgroundSize: "100% 100%",
     backgroundAttachment: "fixed",
@@ -12,7 +11,6 @@ const LevelThree = () => {
   };
   return (
     <div style={bgStyles}>
-      <h2>Level three</h2>
       <h1>
         <center>You're currently in Dream Level 3</center>
       </h1>

@@ -3,7 +3,7 @@ import Level from "../components/Level";
 
 const LevelOne = () => {
   const bgStyles = {
-    backgroundImage: "url(https://i.ibb.co/376g5WN/IMG-1599.jpg)",
+    backgroundImage: "url(https://s23527.pcdn.co/wp-content/uploads/2014/05/inception-movie-screencaps.com-7795.jpg.optimal.jpg)",
     backgroundRepeat: "noRepeat",
     backgroundSize: "100% 100%",
     backgroundAttachment: "fixed",
